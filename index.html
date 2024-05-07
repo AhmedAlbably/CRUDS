@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="script.js" defer></script>
+  <title>CRUDS</title>
+</head>
+
+<body>
+  <section class="container">
+
+    <h1>CRUDS system operation</h1>
+
+    <div class="inputs">
+      <form action="">
+        <div class="line-one">
+          <input type="text" placeholder="name  of product" id="name" required>
+          <input type="text" placeholder="category" id="category" required>
+        </div>
+        <div class="second-line">
+          <input type="number" id="price" placeholder="enter your price" required>
+          <input type="number" id="discount" placeholder="this is your discount" required>
+          <input type="number" id="quantity" placeholder="quantity" required>
+          <textarea name="" id="description" placeholder="enter your comment here " required aria-valuetext="enter your comment here " title="enter your comment here ">
+        </textarea>
+          <button id="add">Add</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="outputs">
+      <input type="text" id="search" placeholder="search about your product">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <td>name</td>
+            <td>category</td>
+            <td>price</td>
+            <td>discount</td>
+            <td>quantity</td>
+            <td>description</td>
+            <td>update</td>
+            <td>delete</td>
+          </tr>
+        </thead>
+
+        <tbody id="product-list">
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+
+</html>
