@@ -49,7 +49,7 @@ function clearInput() {
   description.value = "";
 }
 
-// show the data 
+// show the data
 function showData() {
   tbody.innerHTML = "";
   products.forEach((product, index) => {
@@ -69,8 +69,6 @@ function showData() {
     }
   });
 }
-// make edit
-// Add event listener to the "Add" button outside the editProduct function
 
 function editProduct(index) {
   const product = products[index];
@@ -91,29 +89,14 @@ function editProduct(index) {
     product.quantity = "";
     product.description = "";
 
-    showData(); // Update the table after editing
+    showData();
+    add.textContent = "Update";
+    add.addEventListener("click", () => {
+      add.textContent = "Add";
+    });
   } else {
     console.log("Product not found");
   }
-
-  // Toggle button text
-  toggleButtonText();
-}
-
-function toggleButtonText() {
-  let text = add.textContent;
-  if (text === "Add") {
-    add.textContent = "Update";
-  } else {
-    add.textContent = "Add";
-  }
-}
-
-function toggle() {
-  // Add product logic here
-
-  // Call editProduct to toggle button text
-  editProduct(products.index);
 }
 
 add.addEventListener("click", addProduct);
@@ -154,4 +137,3 @@ function searchByName(term) {
 search.addEventListener("input", () => {
   searchByName(search.value);
 });
-
